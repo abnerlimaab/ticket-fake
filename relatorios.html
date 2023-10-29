@@ -38,16 +38,18 @@
                         <div class="flex space-x-4">
                             <a href="/ticket-fake"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Dashboard</a>
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Inicio</a>
                             <a href="#"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                 x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Veículos</a>
                             <a href="#"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                 x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Abastecimento</a>
-                            <a href="/ticket-fake/relatorios" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                            <a href="/ticket-fake/relatorios"
+                                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
                                 x-state:on="Current" x-state:off="Default" aria-current="page"
-                                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Relatório de abastecimento</a>
+                                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Relatório
+                                de abastecimento</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +57,7 @@
         </div>
     </nav>
 
-    <table border="1" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <table border="1" class="mb-4 w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th class="px-6 py-3">MOTORISTA</th>
@@ -160,5 +162,11 @@
             </tr>
         </tbody>
     </table>
+
+    <a download="relatorio.xlsx" href="relatorio.xlsx"
+        class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Exportar
+    </a>
 </body>
+
 </html>
