@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Fake</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body>
+    <nav x-data="{ open: false }" class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" @click="open = !open" aria-expanded="false"
+                        x-bind:aria-expanded="open.toString()">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg x-description="Icon when menu is closed." x-state:on="Menu open" x-state:off="Menu closed"
+                            class="block h-6 w-6" :class="{ 'hidden': open, 'block': !(open) }" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                        </svg>
+                        <svg x-description="Icon when menu is open." x-state:on="Menu open" x-state:off="Menu closed"
+                            class="hidden h-6 w-6" :class="{ 'block': open, 'hidden': !(open) }" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="/ticket-fake"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Dashboard</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Veículos</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Abastecimento</a>
+                            <a href="/ticket-fake/relatorios" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state:on="Current" x-state:off="Default" aria-current="page"
+                                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Relatório de abastecimento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <table border="1" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th class="px-6 py-3">MOTORISTA</th>
+                <th class="px-6 py-3">PLACA</th>
+                <th class="px-6 py-3">RENAMAV</th>
+                <th class="px-6 py-3">MATRICULA</th>
+                <th class="px-6 py-3">CPF</th>
+                <th class="px-6 py-3">DATA</th>
+                <th class="px-6 py-3">HORA</th>
+                <th class="px-6 py-3">BASE</th>
+                <th class="px-6 py-3">Email Fornecedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Miguel Gonçalves</td>
+                <td>XYZ0123</td>
+                <td>1609997755</td>
+                <td>66111234</td>
+                <td>12312312312</td>
+                <td>9/23/23</td>
+                <td>18:00</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Daniel Pereira</td>
+                <td>ABC6789</td>
+                <td>1709998866</td>
+                <td>66122345</td>
+                <td>23423423423</td>
+                <td>9/30/23</td>
+                <td>14:40</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Rui Martins</td>
+                <td>DEF2345</td>
+                <td>1809990077</td>
+                <td>66133456</td>
+                <td>34534534534</td>
+                <td>10/2/23</td>
+                <td>10:25</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Bruno Carvalho</td>
+                <td>GHI7890</td>
+                <td>1909991188</td>
+                <td>66144567</td>
+                <td>45645645645</td>
+                <td>10/5/23</td>
+                <td>19:55</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Diogo Marques</td>
+                <td>MNO6789</td>
+                <td>2109993300</td>
+                <td>66155678</td>
+                <td>56756756756</td>
+                <td>10/10/23</td>
+                <td>8:05</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Nuno Silva</td>
+                <td>PQR0123</td>
+                <td>2209994411</td>
+                <td>66166789</td>
+                <td>67867867867</td>
+                <td>10/15/23</td>
+                <td>16:30</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>David Santos</td>
+                <td>STU6789</td>
+                <td>2309995522</td>
+                <td>66177890</td>
+                <td>78978978978</td>
+                <td>10/20/23</td>
+                <td>11:50</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Ricardo Mendes</td>
+                <td>VWX2345</td>
+                <td>2409996633</td>
+                <td>66188901</td>
+                <td>89089089089</td>
+                <td>10/6/23</td>
+                <td>17:45</td>
+                <td>FakeLog</td>
+                <td>fornecedor.transfrote@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

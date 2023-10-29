@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Fake</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Dinosaur', 'Length'],
+                ['Acrocanthosaurus (top-spined lizard)', 12.2],
+                ['Albertosaurus (Alberta lizard)', 9.1],
+                ['Allosaurus (other lizard)', 12.2],
+                ['Apatosaurus (deceptive lizard)', 22.9],
+                ['Archaeopteryx (ancient wing)', 0.9],
+                ['Argentinosaurus (Argentina lizard)', 36.6],
+                ['Baryonyx (heavy claws)', 9.1],
+                ['Brachiosaurus (arm lizard)', 30.5],
+                ['Ceratosaurus (horned lizard)', 6.1],
+                ['Coelophysis (hollow form)', 2.7],
+                ['Compsognathus (elegant jaw)', 0.9],
+                ['Deinonychus (terrible claw)', 2.7],
+                ['Diplodocus (double beam)', 27.1],
+                ['Dromicelomimus (emu mimic)', 3.4],
+                ['Gallimimus (fowl mimic)', 5.5],
+                ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+                ['Megalosaurus (big lizard)', 7.9],
+                ['Microvenator (small hunter)', 1.2],
+                ['Ornithomimus (bird mimic)', 4.6],
+                ['Oviraptor (egg robber)', 1.5],
+                ['Plateosaurus (flat lizard)', 7.9],
+                ['Sauronithoides (narrow-clawed lizard)', 2.0],
+                ['Seismosaurus (tremor lizard)', 45.7],
+                ['Spinosaurus (spiny lizard)', 12.2],
+                ['Supersaurus (super lizard)', 30.5],
+                ['Tyrannosaurus (tyrant lizard)', 15.2],
+                ['Ultrasaurus (ultra lizard)', 30.5],
+                ['Velociraptor (swift robber)', 1.8]]);
+
+            var options = {
+                title: 'Abastecimento de veículos',
+                legend: { position: 'none' },
+            };
+
+            var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Combustível', 'Horas por Dia'],
+                ['Gasolina', 11],
+                ['Etanol', 2],
+                ['Diesel', 2],
+                ['GNV', 2],
+                ['Elétrico', 7]
+            ]);
+
+            var options = {
+                title: 'Consumo de combustíveis',
+                is3D: true,
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <nav x-data="{ open: false }" class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" @click="open = !open" aria-expanded="false"
+                        x-bind:aria-expanded="open.toString()">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <svg x-description="Icon when menu is closed." x-state:on="Menu open" x-state:off="Menu closed"
+                            class="block h-6 w-6" :class="{ 'hidden': open, 'block': !(open) }" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                        </svg>
+                        <svg x-description="Icon when menu is open." x-state:on="Menu open" x-state:off="Menu closed"
+                            class="hidden h-6 w-6" :class="{ 'block': open, 'hidden': !(open) }" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="/ticket-fake" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state:on="Current" x-state:off="Default" aria-current="page"
+                                x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Dashboard</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Veículos</a>
+                            <a href="#"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Abastecimento</a>
+                            <a href="/ticket-fake/relatorios"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">Relatório de abastecimento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <dl class="flex gap-16 items-center justify-center my-8">
+        <div class="border border-1 border-gray-200 rounded-md p-4">
+            <dt class="text-lg">Revenue</dt>
+            <dd class="text-green-500	">+4.75%</dd>
+            <dd class="font-bold text-2xl">$405,091.00</dd>
+        </div>
+        <div class="border border-1 border-gray-200 rounded-md p-4">
+            <dt class="text-lg">Overdue invoices</dt>
+            <dd class="text-red-600	">+54.02%</dd>
+            <dd class="font-bold text-2xl">$12,787.00</dd>
+        </div>
+        <div class="border border-1 border-gray-200 rounded-md p-4">
+            <dt class="text-lg">Outstanding invoices</dt>
+            <dd class="text-green-500	">-1.39%</dd>
+            <dd class="font-bold text-2xl">$245,988.00</dd>
+        </div>
+        <div class="border border-1 border-gray-200 rounded-md p-4">
+            <dt class="text-lg">Expenses</dt>
+            <dd class="text-red-600	">+10.18%</dd>
+            <dd class="font-bold text-2xl">$30,156.00</dd>
+        </div>
+    </dl>
+
+    <section class="flex" >
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </section>
+</body>
+
+</html>
